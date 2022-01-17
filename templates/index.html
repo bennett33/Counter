@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <title>Counter</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        #add-btn {
+            background-color: rgb(255, 74, 74);
+            color: white;
+            padding: 5px;
+            margin-right: 25px;
+            border: none;
+        }
+        #reset-btn {
+            background-color: rgb(0, 126, 38);
+            color: white;
+            padding: 5px;
+            margin-left: 25px;
+            border: none;
+        }
+        
+        .btn-con {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Counter</h1>
+    <h2>{{session["count"]}} times</h2>
+<div class="btn-con">
+<form action="/add2" method="post"> 
+<button id="add-btn">Add 2</button>
+</form>
+<form action="/reset" method="post"> 
+<button id="reset-btn">Reset</button>
+</form>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
